@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Shady Message Relay</title>
+	<link rel="stylesheet" href="message.css" />
+</head>
+<body>
+	<main class="app">
+		<header class="head">
+			<h1>MESSAGE RELAY</h1>
+			<p id="statusText">Live sync is active</p>
+			<div class="connect-row">
+				<input id="serverInput" type="text" value="" placeholder="ws://server:8080/ws" />
+				<input id="roomInput" type="text" value="shadow" maxlength="32" placeholder="room" />
+				<button id="connectBtn" type="button" class="btn ghost">Connect</button>
+			</div>
+		</header>
+
+		<section id="history" class="history" aria-live="polite"></section>
+
+		<form id="messageForm" class="message-form" autocomplete="off">
+			<input id="messageInput" type="text" placeholder="Write a message" maxlength="500" required />
+			<button id="recordBtn" type="button" class="btn danger">Voice</button>
+			<button type="submit" class="btn send">Send</button>
+		</form>
+	</main>
+
+	<script src="message.js"></script>
+</body>
+</html>
